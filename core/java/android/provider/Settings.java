@@ -3573,6 +3573,12 @@ public final class Settings {
         public static final String VOICE_LAUNCH_INTENT = "voice_launch_intent";
 
         /**
+         * Whether F-Charge is enabled, only when the kernel support it
+         * @hide
+         */
+        public static final String FCHARGE_ENABLED = "fcharge_enabled";
+
+        /**
          * Settings to backup. This is here so that it's in the same place as the settings
          * keys and easy to update.
          *

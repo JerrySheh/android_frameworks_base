@@ -15,6 +15,7 @@ import android.os.UserHandle;
 import android.provider.Settings;
 import android.telephony.TelephonyManager;
 import android.text.TextUtils;
+import java.io.File;
 
 import com.android.internal.telephony.PhoneConstants;
 
@@ -87,5 +88,9 @@ public class QSUtils {
 
         public static boolean adbEnabled(ContentResolver resolver) {
             return (Settings.Global.getInt(resolver, Settings.Global.ADB_ENABLED, 0)) == 1;
+        }
+
+        public static boolean hasKernelFeature(String path) {
+            return new File(path).exists();
         }
 }
